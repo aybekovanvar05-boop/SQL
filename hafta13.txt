@@ -1,0 +1,14 @@
+ alter  trigger yenisuttutar
+on musteri
+after 
+update 
+as
+begin 
+update alinan_sut
+set sut_tutar=sut_tutar*40
+end
+----------------------------
+update musteri
+set musteri_soyadi='aybekovv'
+where musteri_kodu=200
+                                         Anvarbek Aybekov
