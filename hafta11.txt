@@ -1,0 +1,9 @@
+SELECT        TOP (200) urun_id, musteri_kodu, urun_kodu, urun_fiyat, urun_adet, urun_tutar, tarih
+FROM            verilen_urun
+ORDER BY urun_adet DESC
+
+
+Anvarbek Aybekov
+SELECT        SUM(verilen_para) AS Expr1
+FROM            para
+WHERE        (musteri_kodu = 202)
