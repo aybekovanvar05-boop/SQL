@@ -1,0 +1,29 @@
+
+create  PROCEDURE [dbo].[fulhesap4]
+
+(
+@musteri_kodu int
+)
+
+as
+BEGIN
+SELECT * FROM dbo.musteri 
+WHERE  musteri_kodu=@musteri_kodu
+END
+BEGIN
+SELECT* FROM dbo.verilen_urun 
+WHERE  musteri_kodu=@musteri_kodu
+END 
+BEGIN
+SELECT *FROM dbo.alinan_sut 
+WHERE  musteri_kodu=@musteri_kodu
+END
+begin
+SELECT * FROM dbo.para 
+WHERE  musteri_kodu=@musteri_kodu
+END
+---------------------------------------
+exec detayvurun
+@musteri_kodu=203,
+@tarih1='2014',
+@tarih2='2015'                Anvarbek Aybekov
