@@ -1,0 +1,9 @@
+create procedure alinan_sut_aylik
+@t1 date,@t2 date 
+as
+begin
+select sum(sut_tutar)from alinan_sut
+where tarih between @t1 and @t2
+
+
+end
