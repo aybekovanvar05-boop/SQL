@@ -1,0 +1,28 @@
+create database loan;
+go
+use loan;
+go
+create table customer(
+customer_number int primary key,
+customer_name varchar,
+Adress varchar);
+create table Collector(
+collector_ID int primary key,
+collector_name varchar);
+create table Loan_Contract(
+Contract_ID int primary key,
+Date_contract_Starts datetime,
+Date_contract_Ends datetime,
+InterestRate int,
+LoanAmout int,
+LoanPaymentAmountDue int,
+LoanPaymentFrequency int,
+LoanPaymentDueDate datetime);
+create table Payment_Type(
+payment_type_code int primary key,
+payment_type_description nchar);
+create table Payment(
+Payment_ID int primary key,
+DateOFPayment datetime,
+AmountOfPayment int,
+Remarks nchar);
